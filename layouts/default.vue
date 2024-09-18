@@ -19,7 +19,7 @@ const footerText= ref(`Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
                 <ul class="nav navbar-nav">
                     <li class="nav-item">
-                        <NuxtLink to="/home">Home</NuxtLink>
+                        <NuxtLink to="/">Home</NuxtLink>
                     </li>
                     <li class="nav-item">
                         <NuxtLink to="/lakes">The Great Lakes</NuxtLink>
