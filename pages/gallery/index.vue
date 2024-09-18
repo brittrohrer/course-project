@@ -121,7 +121,7 @@ const images = ref([
 
 
 //Image Prop Component
-import ImageList from '~/components/imageList.vue'; 
+import ImageList from '~/components/ImageList.vue'; 
 
 
 
