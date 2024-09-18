@@ -1,8 +1,6 @@
 <script setup>
 import { ref } from "vue";
 
-const name = ref("AccordionPage");
-
 /* create array of accordian content to call on in template*/
 const accordion = ref([
     {
