@@ -45,11 +45,5 @@ const title =ref(`Michigan`);
         color: lightblue;
         font-weight: bold;
     }
-    .banner {
-        background-image: url(/public/mi.jpg);
-        height: 25rem;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size :cover;
-    }
+   
 </style>
