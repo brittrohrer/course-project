@@ -6,11 +6,11 @@ const title =ref(`Michigan`);
 
 </script>
 <template>
-    <header class="bg-light">
-            
+    <header>
+        <div class="banner"> 
             <nav class="navbar navbar-expand-md bg-dark navbar-dark">
                 <h1 class="nav-title navbar-brand">{{ title }}</h1>
-                <ul class="nav navbar-nav mr-auto">
+                <ul class="nav navbar-nav">
                     <li class="nav-item">
                         <NuxtLink to="/">Home</NuxtLink>
                     </li>
@@ -25,7 +25,8 @@ const title =ref(`Michigan`);
                     </li>
                 </ul>
             </nav>
-        </header>
+        </div>     
+    </header>
 </template>
 <style scoped>
     .nav-title {
@@ -43,5 +44,12 @@ const title =ref(`Michigan`);
     .router-link-active {
         color: lightblue;
         font-weight: bold;
+    }
+    .banner {
+        background-image: url(/public/mi.jpg);
+        height: 25rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size :cover;
     }
 </style>

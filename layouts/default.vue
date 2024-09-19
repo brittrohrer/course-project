@@ -17,7 +17,7 @@ const footerText= ref(`Lorem ipsum dolor sit amet consectetur adipisicing elit. 
         <AppHeader />
 
         <slot />
-
+        
         <AppFooter />
     </div>
 

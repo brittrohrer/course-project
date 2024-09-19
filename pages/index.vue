@@ -8,9 +8,9 @@ const touchButton = ref(true);
 /* Jumbotron
 created ref variables for this so that in the template section the content could be rendered dynamically
 and be changed easily if the text changed*/
-const jumboTitle = ref(`Michigan?`);
-const jumboText = ref(` Where's that?`);
-const jumboText2 = ref(`Take out your right hand (palm facing you) and lay it in the center of The Great Lakes`);       
+const jumboTitle = ref(`Discovering Michigan!`);
+const jumboText = ref(`“The best sky was in Italy or Spain and in Northern Michigan in the fall” - Ernest Hemingway, Green Hills of Africa`);
+const jumboText2 = ref(`Experience the seasons of Michigan. It's a place for food lovers, outdoor adventurers, cultural experiences, and endless memories.`);       
 
 
 /* Cards
@@ -39,18 +39,18 @@ const cards = ref([
 </script>
 
 <template>
-    <main class="container">
-        <div class="jumbotron jumbotron-fluid bg-info">
+    <main class="container mt-5">
+        <div class="jumbotron jumbotron-fluid jumbo-container">
             <!--create jumbotron -->
-            <div class="container mt-5 p-2">
+            <div class="container p-2">
                 <!-- call the jumbotron title from the script section -->
                 <h2 class="display-4">{{jumboTitle}}</h2>
                 <!--create top margin of 2 text and emphasize text with "lead"
                 also create a button and clickevent that use if/else that will use the state of the button when clicked (true or false) 
                 to determine with text to display-->
-                <button class="btn btn-danger" @click="touchButton = !touchButton">Click Me!</button>
                 <p v-if ="touchButton" class="lead mt-2">{{jumboText}}</p>
                 <p v-else class="lead mt-2">{{jumboText2}}</p>
+                <button class="btn btn-warning" @click="touchButton = !touchButton">Your journey starts here ...  </button>
             </div>
         </div>
         <div class= "container d-flex flex-row justify-content-evenly mt-5 mb-5 flex-wrap gap-3">
@@ -77,6 +77,9 @@ const cards = ref([
 <style scoped>
     p, h2 {
         color: black;
+    }
+    .jumbo-container {
+        border: solid black;
     }
     
 </style>

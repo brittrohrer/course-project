@@ -9,7 +9,7 @@ const footerText= ref(`Lorem ipsum dolor sit amet consectetur adipisicing elit. 
 
 </script>
 <template>
-    <footer class="footer bg-light mt-auto">
+    <footer class="footer bg-light mt-5">
             <h4 class="text-center">{{footerTitle}}</h4>
             <p>{{footerText}}</p>
         </footer>
