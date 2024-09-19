@@ -15,15 +15,10 @@ const footerText= ref(`Lorem ipsum dolor sit amet consectetur adipisicing elit. 
 <template>
     <div>
         <AppHeader />
+
         <slot />
+
         <AppFooter />
     </div>
+
 </template>
-<style scoped>
-    li {
-        padding: 0 1rem;
-    }
-    li a {
-        text-decoration: none;
-    }
-</style>

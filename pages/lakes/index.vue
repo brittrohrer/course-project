@@ -58,24 +58,26 @@ const show = ref(true)
 </script>
 
 <template>
-    <main class="container">
+    <main class="container mt-5 mb-5">
         <div class="accordion" id="myFirstAccordion">
             <!-- use v-for to loop through accordian array and display header and button -->
             <div class="accordion-item"
                 v-for="a in accordion"
                 :key="a.header">
-                <h2 class="accordion-header">{{a.header}}</h2>    
-                <!-- create button with target pulled from array and click event to show the body/content when button is clicked for target-->
-                <button
-                    class="accordion-button collapsed"
-                    type="button" 
-                    data-bs-toggle="collapse"
-                    aria-expanded="false" 
-                    :data-bs-target="a.target"
-                    :aria-controls="a.controls"
-                    @click= "show"
-                >
-                </button>
+                <h2 class="accordion-header"> 
+                    <!-- create button with target pulled from array and click event to show the body/content when button is clicked for target-->
+                    <button
+                        class="accordion-button collapsed"
+                        type="button" 
+                        data-bs-toggle="collapse"
+                        aria-expanded="false" 
+                        :data-bs-target="a.target"
+                        :aria-controls="a.controls"
+                        @click= "show"
+                    >
+                    {{a.header}}
+                    </button>
+                </h2>
                 <!-- identify target based on id and show the body -->
                 <div :id="a.id" class="accordion-collapse collapse" data-bs-parent="#myFirstAccordion">
                     <div v-show="show" class="accordion-body">
@@ -91,5 +93,9 @@ const show = ref(true)
 <style scoped>
 h2 {
     color:black;
+    
+}
+button {
+    font-size: 2rem;
 }
 </style>

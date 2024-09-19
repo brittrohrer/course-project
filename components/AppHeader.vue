@@ -7,9 +7,10 @@ const title =ref(`Michigan`);
 </script>
 <template>
     <header class="bg-light">
-            <h1>{{ title }}</h1>
-            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-                <ul class="nav navbar-nav">
+            
+            <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                <h1 class="nav-title navbar-brand">{{ title }}</h1>
+                <ul class="nav navbar-nav mr-auto">
                     <li class="nav-item">
                         <NuxtLink to="/">Home</NuxtLink>
                     </li>
@@ -26,3 +27,21 @@ const title =ref(`Michigan`);
             </nav>
         </header>
 </template>
+<style scoped>
+    .nav-title {
+        font-size: 3rem;
+        padding: 0 2rem;
+        color: lightgrey;
+    }
+    li {
+        padding: 0 1rem;
+    }
+    li a {
+        text-decoration: none;
+        color: lightgray;
+    }
+    .router-link-active {
+        color: lightblue;
+        font-weight: bold;
+    }
+</style>
