@@ -29,21 +29,4 @@ const title =ref(`Michigan`);
     </header>
 </template>
 <style scoped>
-    .nav-title {
-        font-size: 3rem;
-        padding: 0 2rem;
-        color: lightgrey;
-    }
-    li {
-        padding: 0 1rem;
-    }
-    li a {
-        text-decoration: none;
-        color: lightgray;
-    }
-    .router-link-active {
-        color: lightblue;
-        font-weight: bold;
-    }
-   
 </style>

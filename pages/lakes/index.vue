@@ -91,10 +91,7 @@ const show = ref(true)
 </template>
 
 <style scoped>
-h2 {
-    color:black;
-    
-}
+
 button {
     font-size: 2rem;
 }

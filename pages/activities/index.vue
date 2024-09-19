@@ -1,10 +1,7 @@
 <script setup>
-
 import { ref } from "vue";
-const name = ref("GridPage");
-
 /* Create array and header variable to dynamically build page content for each grid container */
-const headerOne =ref("Natural Wonders")
+const headerOne = ref("Natural Wonders")
 const gridOne = ref([
     {
         class: `col-lg-12`,
@@ -125,7 +122,4 @@ const gridThree = ref([
 </template>
 
 <style scoped>
-h2,h3,p {
-    color: black;
-}
 </style>

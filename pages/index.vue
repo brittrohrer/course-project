@@ -75,11 +75,5 @@ const cards = ref([
 </template>
 
 <style scoped>
-    p, h2 {
-        color: black;
-    }
-    .jumbo-container {
-        border: solid black;
-    }
     
 </style>
