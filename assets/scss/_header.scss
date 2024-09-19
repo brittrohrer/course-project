@@ -1,6 +1,6 @@
 .banner {
-    background-image: url(/public/mi.jpg);
-    height: 25rem;
+    background-image: url(https://images.unsplash.com/photo-1640550609320-13606d09ab20?q=80&w=3055&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    height: 30rem;
     background-repeat: no-repeat;
     background-position: center;
     background-size :cover;
@@ -16,10 +16,10 @@
     font-weight: bold;
 }
     
-.nav-item {
+li {
     padding: 0 1rem;
 }
-.nav-item a {
+li a {
     text-decoration: none;
     color: $gray;
 }
