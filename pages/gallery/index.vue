@@ -129,8 +129,9 @@ import ImageList from '~/components/ImageList.vue';
 
 
 <template>
-   <main>
-        <div class="img-cont container mt-5 d-flex flex-wrap gap-1 justify-content-center">
+   <main class="container mt-5">
+        <h2 class="page-header">A Picture Worth a 1000 Words</h2>
+        <div class="img-cont mt-5 d-flex flex-wrap gap-1 justify-content-center">
         <!-- 
             Name the props we are passing down to Image List from the specified array
             use v-for to loop through the array and display each object (dynamic props)

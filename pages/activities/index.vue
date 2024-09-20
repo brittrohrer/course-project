@@ -113,7 +113,7 @@ const gridThree = ref([
 
 <template>
     <main class="container mt-5">
-        <h2>Popular Destinations and Events</h2>
+        <h2 class="page-header">Popular Destinations and Events</h2>
         <div class="container">
         <!-- use a v-for for each grid section to display the header, title and body with each of their specified layouts-->
             <div class="grid-container row">

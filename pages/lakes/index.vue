@@ -64,12 +64,13 @@ const show = ref(true)
 
 <template>
     <main class="container mt-5 mb-5">
+        <h2 class="page-header">The Great Lakes</h2>
         <div class="accordion" id="myFirstAccordion">
             <!-- use v-for to loop through accordian array and display header and button -->
             <div class="accordion-item"
                 v-for="a in accordion"
                 :key="a.header">
-                <h2 class="accordion-header"> 
+                <h3 class="accordion-header"> 
                     <!-- create button with target pulled from array and click event to show the body/content when button is clicked for target-->
                     <button
                         class="accordion-button collapsed"
@@ -82,7 +83,7 @@ const show = ref(true)
                     >
                     {{a.header}}
                     </button>
-                </h2>
+                </h3>
                 <!-- identify target based on id and show the body -->
                 <div :id="a.id" class="accordion-collapse collapse" data-bs-parent="#myFirstAccordion">
                     <div v-show="show" class="accordion-body">
