@@ -1,13 +1,11 @@
 <script setup>
 
-import { ref } from "vue";
-const name = ref("Home");
-
-const touchButton = ref(true);
+import { ref, onMounted } from "vue";
 
 /* Jumbotron
 created ref variables for this so that in the template section the content could be rendered dynamically
 and be changed easily if the text changed*/
+const touchButton = ref(true);
 const jumboTitle = ref(`Discovering Michigan!`);
 const jumboText = ref(`“The best sky was in Italy or Spain and in Northern Michigan in the fall” - Ernest Hemingway, Green Hills of Africa`);
 const jumboText2 = ref(`Experience the seasons of Michigan. It's a place for food lovers, outdoor adventurers, cultural experiences, and endless memories.`);       
@@ -15,27 +13,18 @@ const jumboText2 = ref(`Experience the seasons of Michigan. It's a place for foo
 
 /* Cards
 create array of cards objects to call on in the template section*/
-const cards = ref([
-                {
-                    header: `Pure Michigan`,
-                    text: `The official travel and tourism website for Michigan.`,
-                    link: `https://www.michigan.org/`,
-                    button: `Link Button`
-                },
-                {
-                    header: `Great Lakes Guide`,
-                    text: `Discover more about each of the Great Lakes and their importance below and on the Accordion Page.`,
-                    link: `https://greatlakes.guide/`,
-                    button: `Link Button`
-                },
-                {
-                    header: `National Parks of Michigan`,
-                    text: `All site maintained by the National Parks Service in the State of Michigan.`,
-                    link: `https://www.nps.gov/state/mi/index.htm`,
-                    button: `Link Button`
-                },
-            ],
-);
+
+const weather = ref([]);
+onMounted(async() => {
+    try{
+        const response = await fetch(
+        "https://api.open-meteo.com/v1/forecast?latitude=45.4014,46.5435,42.9634,45.7452,42.3314&longitude=-84.9083,-87.3954,-85.6681,-87.0646,-83.0457&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset,precipitation_probability_max,wind_speed_10m_max&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch&timezone=America%2FNew_York&forecast_days=1"
+        );
+        weather.value = await response.json();
+        console.log(weather.value); 
+    } catch (error) {} 
+});
+
 </script>
 
 <template>
@@ -55,20 +44,22 @@ const cards = ref([
         </div>
         <div class= "container d-flex flex-row justify-content-evenly mt-5 mb-5 flex-wrap gap-3">
             <!-- use a vue for loop to loop thru the cards array in script section to create each card-->
-            <div class="card" 
-                style="width: 18rem;" 
-                v-for="card in cards" :key="card.name">
-                <div class="card-body">
-                    <h3 class="card-title">
-                    {{card.header}}</h3>
-                    <p class="card-text">{{card.text}}</p>
-                    <!-- bind the card link so the link can function properly-->
-                    <a :href="card.link" 
-                        class="btn btn-primary">
-                        {{card.button}}
-                    </a>
-                </div>
-            </div>
+            <ul>
+                <li 
+                v-for="w in weather" :key="w.latitude">
+                    <Card 
+                        :latitude="w.latitude"
+                        :longitude="w.longitude"
+                        :sunrise="w.daily.sunrise[0]"
+                        :sunset="w.daily.sunset[0]"
+                        :tempMax="w.daily.temperature_2m_max[0]"
+                        :tempMin="w.daily.temperature_2m_min[0]"
+                        :wind="w.daily.wind_speed_10m_max[0]"
+                        :tempUnits="w.daily_units.temperature_2m_max"
+                        :windUnits="w.daily_units.wind_speed_10m_max"
+                    />
+                </li>
+            </ul>
         </div>
     </main>
     
