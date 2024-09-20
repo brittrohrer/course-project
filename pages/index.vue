@@ -42,10 +42,10 @@ onMounted(async() => {
                 <button class="btn btn-warning" @click="touchButton = !touchButton">Your journey starts here ...  </button>
             </div>
         </div>
-        <div class= "container d-flex flex-row justify-content-evenly mt-5 mb-5 flex-wrap gap-3">
+        <div class= "container">
             <!-- use a vue for loop to loop thru the cards array in script section to create each card-->
-            <ul>
-                <li 
+            <ul  class="card-container d-flex flex-row justify-content-evenly mt-5 mb-5 flex-wrap gap-3" >
+                <li
                 v-for="w in weather" :key="w.latitude">
                     <Card 
                         :latitude="w.latitude"

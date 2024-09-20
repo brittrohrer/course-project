@@ -14,30 +14,30 @@ const weatherProp = defineProps({
 
 </script>
 <template>
-    <div class="card">
+    <div class="weather-card card">
         <h3>
             Latitude: {{ weatherProp.latitude }} <br> Longitude: {{ weatherProp.longitude }}
         </h3>
         <div class="row">
-            <div class="col-4">
+            <div class="col-lg-12">
                 <p>
                     Sunrise: {{ weatherProp.sunrise }}
-                </p>
-                <p>
+                    <br>
                     Sunset: {{ weatherProp.sunset }}
                 </p>
             </div>
-            <div class="col-4">
+            <div class="col-lg-6">
                 <p>
-                    Temp Max: {{ weatherProp.tempMax }}{{ tempUnits }}
-                </p>
-                <p>
+                    Temp Max: {{ weatherProp.tempMax }}{{ tempUnits }} 
+                    <br>
                     Temp Min: {{ weatherProp.tempMin }}{{ tempUnits }}
                 </p>
             </div>
-            <div class="col-4">
+            <div class="col-lg-6">
                 <p>
-                    Wind Speed Max: {{ weatherProp.wind }}{{ windUnits }}
+                    Wind Speed Max: 
+                    <br> 
+                    {{ weatherProp.wind }}{{ windUnits }}
                 </p>
             </div>
         </div>
