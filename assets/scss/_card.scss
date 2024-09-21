@@ -1,9 +1,12 @@
 .card-container {
     background-color: $blue;
-    padding: 1rem;
+    padding: 2rem 1rem;
     list-style-type: none;
 }
 .weather-card {
     width: 23rem;
     padding: 1rem;
+}
+.weather-button {
+    height: 6rem;
 }

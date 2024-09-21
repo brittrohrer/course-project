@@ -24,7 +24,6 @@ onMounted(async() => {
         console.log(weather.value); 
     } catch (error) {} 
 });
-
 </script>
 
 <template>
@@ -43,10 +42,12 @@ onMounted(async() => {
             </div>
         </div>
         <div class= "container">
+            <h2>Today's Weather Accross Michigan</h2>
             <!-- use a vue for loop to loop thru the cards array in script section to create each card-->
-            <ul  class="card-container d-flex flex-row justify-content-evenly mt-5 mb-5 flex-wrap gap-3" >
+            <ul  class="card-container d-flex flex-row justify-content-evenly mt-5 mb-5 flex-wrap gap-3">
                 <li
-                v-for="w in weather" :key="w.latitude">
+                v-for="w in weather" :key="w.latitude"
+                >
                     <Card 
                         :latitude="w.latitude"
                         :longitude="w.longitude"
