@@ -15,14 +15,20 @@ let btnActive = ref(false); // create starting value of the isActive variable to
 function displayColorTemp(e, weatherProp) {
     this.btnActive = !this.btnActive; // create the toggle of active and not active on each click
     if (this.btnActive === true) { // if the image is active, log index and change border to active
-        if (weatherProp.tempMax > 80) {
-             e.target.style.backgroundColor = "red";
+        if (weatherProp.tempMax > 90) {
+             e.target.style.backgroundColor = "#a13430";
         }
-        else if (weatherProp.tempMax < 80 && weatherProp.tempMax > 70 ) {
-            e.target.style.backgroundColor = "green";
+        else if (weatherProp.tempMax < 90 && weatherProp.tempMax > 80 ) {
+            e.target.style.backgroundColor = "#e07828";
+        }
+        else if (weatherProp.tempMax < 80 && weatherProp.tempMax > 65 ) {
+            e.target.style.backgroundColor = "#518049";
+        }
+        else if (weatherProp.tempMax < 65 && weatherProp.tempMax > 50 ) {
+            e.target.style.backgroundColor = "#498072";
         }
         else {
-            e.target.style.backgroundColor = "blue";
+            e.target.style.backgroundColor = "#3866ab";
         }
        
     }
@@ -63,7 +69,7 @@ function displayColorTemp(e, weatherProp) {
             </div>
         </div>
         <button class="weather-button" @click="displayColorTemp($event, weatherProp)">
-            CLick here for Temp Color!
+            Click here for Temp Color!
         </button>
     </div>
 </template>
