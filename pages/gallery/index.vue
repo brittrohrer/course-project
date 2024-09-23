@@ -136,7 +136,7 @@ const images = ref([
             Name the props we are passing down to Image List from the specified array
             use v-for to loop through the array and display each object (dynamic props)
          -->
-        <ImageList 
+        <ImageGallery 
                  v-for="(image, index) in images"
                  :key='index'
                  :src='image.src' 
