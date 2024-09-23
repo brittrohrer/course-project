@@ -13,7 +13,7 @@ const weatherProp = defineProps({
         currentTemp: Number,
 });
 let btnActive = ref(false); // create starting value of the isActive variable to false/inactive
-function displayColorTemp(e, weatherProp) {
+function displayColorTemp(btnActive, e, weatherProp) {
     
     this.btnActive = !this.btnActive; // create the toggle of active and not active on each click
     if (this.btnActive === true) { // if the image is active, log index and change border to active
@@ -77,7 +77,7 @@ function displayColorTemp(e, weatherProp) {
                 </p>
             </div>
         </div>
-        <button class="weather-button" @click="displayColorTemp(btnActive, $event, weatherProp)">
+        <button class="weather-button" @click.prevent="displayColorTemp(btnActive, $event, weatherProp)">
             Click for Current Temp Color!
         </button>
     </div>
