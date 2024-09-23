@@ -1,0 +1,15 @@
+.card-container {
+    background-color: $blue;
+    padding: 2rem 1rem;
+    list-style-type: none;
+}
+.weather-card {
+    width: 23rem;
+    padding: 1rem;
+}
+.weather-button {
+    height: 3rem;
+    background-color: $white;
+    border-radius: 10px;
+    border: solid $dark-gray 1px;
+}
