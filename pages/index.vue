@@ -1,7 +1,6 @@
 <script setup>
 
 import { ref, onMounted } from "vue";
-import Card from "@/components/Card.vue";
 
 /* Jumbotron
     - jumbotron ref variables
