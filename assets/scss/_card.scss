@@ -8,6 +8,8 @@
     padding: 1rem;
 }
 .weather-button {
-    height: 6rem;
+    height: 3rem;
     background-color: $white;
+    border-radius: 10px;
+    border: solid $dark-gray 1px;
 }

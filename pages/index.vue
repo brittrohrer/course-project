@@ -18,7 +18,7 @@ const weather = ref([]);
 onMounted(async() => {
     try{
         const response = await fetch(
-        "https://api.open-meteo.com/v1/forecast?latitude=45.4014,46.5435,42.9634,45.7452,42.3314&longitude=-84.9083,-87.3954,-85.6681,-87.0646,-83.0457&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset,precipitation_probability_max,wind_speed_10m_max&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch&timezone=America%2FNew_York&forecast_days=1"
+        "https://api.open-meteo.com/v1/forecast?latitude=46.5435,45.7452,45.4014,42.9634,42.3314&longitude=-87.3954,-87.0646,-84.9083,-85.6681,-83.0457&current=temperature_2m&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset,precipitation_probability_max,wind_speed_10m_max&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch&timezone=America%2FNew_York&forecast_days=1"
         );
         weather.value = await response.json();
         console.log(weather.value); 
@@ -42,7 +42,7 @@ onMounted(async() => {
             </div>
         </div>
         <div class= "container">
-            <h2>Today's Weather Accross Michigan</h2>
+            <h2>Today's Weather Across Michigan</h2>
             <!-- use a vue for loop to loop thru the cards array in script section to create each card-->
             <ul  class="card-container d-flex flex-row justify-content-evenly mt-5 mb-5 flex-wrap gap-3">
                 <li
@@ -58,6 +58,7 @@ onMounted(async() => {
                         :wind="w.daily.wind_speed_10m_max[0]"
                         :tempUnits="w.daily_units.temperature_2m_max"
                         :windUnits="w.daily_units.wind_speed_10m_max"
+                        :currentTemp="w.current.temperature_2m"
                     />
                 </li>
             </ul>
