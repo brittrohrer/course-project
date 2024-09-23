@@ -20,7 +20,7 @@ const prop = defineProps({
 */
 
 let isActive = ref(false); // create starting value of the isActive variable to false/inactive
-function useBorderFunc(isActive, e, index) {
+function useBorderFunc(e, index) {
     this.isActive = !this.isActive; // create the toggle of active and not active on each click
     if (this.isActive === true) { // if the image is active, log index and change border to active
         console.log (index + ' is active');
@@ -48,7 +48,7 @@ function useBorderFunc(isActive, e, index) {
             :alt="prop.alt"
             :class="prop.class"
             :title="prop.title"
-            @click = "useBorderFunc(isActive, $event, index)"
+            @click = "useBorderFunc($event, index)"
         >
     </div>
 </template>
