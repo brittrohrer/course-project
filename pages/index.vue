@@ -42,11 +42,11 @@ onMounted(async() => {
         <!-- Jumbotron -->
         <div class="jumbotron jumbotron-fluid jumbo-container">
             <div class="container p-2"> 
-                <h2 class="display-4">{{jumboTitle}}</h2>
+                <h2 class="display-4 jumbo-title">{{jumboTitle}}</h2>
                 
                 <!-- Toggle between two different paragraphs of text with button click -->
-                <p v-if ="touchButton" class="lead mt-2">{{jumboText}}</p>
-                <p v-else class="lead mt-2">{{jumboText2}}</p>
+                <p v-if ="touchButton" class="lead mt-2 jumbo-text">{{jumboText}}</p>
+                <p v-else class="lead mt-2 jumbo-text">{{jumboText2}}</p>
                 <button class="btn btn-warning" @click="touchButton = !touchButton">Your journey starts here ...  </button>
             </div>
         </div>

@@ -94,7 +94,7 @@ const show = ref(true)
                 <div :id="a.id" class="accordion-collapse collapse" data-bs-parent="#myFirstAccordion">
                     <div v-show="show" class="accordion-body">
                         <p>{{a.body}}</p>
-                        <img :src="a.img">
+                        <img class="img-fluid" :src="a.img">
                     </div>
                 </div>
             </div>
