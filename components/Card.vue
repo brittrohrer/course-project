@@ -15,13 +15,16 @@ const weatherProp = defineProps({
         currentTemp: Number,
 });
 let on = ref(false)
+
 function displayColorTemp(e) {
+    let temps = weatherProp.currentTemp;
     on = !on;
     console.log('toggle ' + on);
     if(on === true) {
-        console.log('got this ' + on)
+        console.log('got this ' + on);
+        console.log(temps);
     } else {
-        console.log('not today' + on)
+        console.log('not today' + on);
     }
 }
 
