@@ -14,14 +14,17 @@ const weatherProp = defineProps({
         windUnits: String,
         currentTemp: Number,
 });
-let on = ref(false)
 
+
+let on = ref(false);
+
+//Click Function to Change Button
 function displayColorTemp(e) {
     let temps = weatherProp.currentTemp;
-    on = !on;
+    on = !on; //toggle true/false  //First click needs double click why?
     console.log('toggle ' + on);
-    if(on === true) {
-        console.log('got this ' + on);
+    if(on === true) { // True change color of button to different color based on current temps
+        console.log('Should say true: ' + on);
         console.log(temps);
         if (temps > 90) {
             e.target.style.backgroundColor = "#E66B39";
@@ -39,54 +42,18 @@ function displayColorTemp(e) {
             e.target.style.backgroundColor = "#26798A";
             e.target.style.border = "none";
         }
-    } else {
-        console.log('not today' + on);
+    } else { // False - go back to original style
+        console.log('Should say false:' + on);
         e.target.style.backgroundColor = "white";
         e.target.style.border = "solid gray 1px";
     }
 }
-
-//let btnActive = ref(false); // create starting value of the isActive variable to false/inactive
-
-
-/* function displayColorTemp(e, weatherProp, btnActive) {
-   this.btnActive = !this.btnActive; // create the toggle of active and not active on each click
-    console.log(this.btnActive);
-    if (this.btnActive === true) { // if the image is active, log index and change border to active
-        if (weatherProp.currentTemp > 90) {
-             e.target.style.backgroundColor = "#E66B39";
-             e.target.style.border = "none";
-        }
-        else if (weatherProp.currentTemp < 90 && weatherProp.currentTemp > 80 ) {
-            e.target.style.backgroundColor = "#F4B96D";
-            e.target.style.border = "none";
-        }
-        else if (weatherProp.currentTemp < 80 && weatherProp.currentTemp > 70 ) {
-            e.target.style.backgroundColor = "#F5EFB2";
-            e.target.style.border = "none";
-        }
-        else if (weatherProp.currentTemp < 70 && weatherProp.currentTemp > 60 ) {
-            e.target.style.backgroundColor = "#74B985";
-            e.target.style.border = "none";
-        }
-        else {
-            e.target.style.backgroundColor = "#26798A";
-            e.target.style.border = "none";
-        }
-       
-    }
-    else {  // if the image is not active then log is not active and make border none
-        e.target.style.backgroundColor = "white";
-        e.target.style.border = "solid gray 1px";
-    }
-} */
-
 </script>
 <template>
     <div class="weather-card card">
         <div class="row">
-            <h3 class="col">Location:</h3>
-            <p class="col">Lat: {{ weatherProp.latitude }} <br>
+            <h3 class="col-lg-6 col-md-12">Location:</h3>
+            <p class="col-lg-6 col-md-12">Lat: {{ weatherProp.latitude }} <br>
                            Long: {{ weatherProp.longitude }}
             </p>
         </div>
@@ -111,8 +78,5 @@ function displayColorTemp(e) {
         <button class="weather-button" @click="displayColorTemp">
             Click for Current Temp Color!
         </button>
-       <!-- <button class="weather-button" @click="displayColorTemp($event, weatherProp)">
-            Click for Current Temp Color!
-        </button> -->
     </div>
 </template>

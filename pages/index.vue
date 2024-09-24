@@ -38,15 +38,13 @@ onMounted(async() => {
 
 <template>
     <main class="container mt-5">
+
         <!-- Jumbotron -->
         <div class="jumbotron jumbotron-fluid jumbo-container">
-            <!--create jumbotron -->
-            <div class="container p-2">
-                <!-- call the jumbotron title from the script section -->
+            <div class="container p-2"> 
                 <h2 class="display-4">{{jumboTitle}}</h2>
-                <!--create top margin of 2 text and emphasize text with "lead"
-                also create a button and clickevent that use if/else that will use the state of the button when clicked (true or false) 
-                to determine with text to display-->
+                
+                <!-- Toggle between two different paragraphs of text with button click -->
                 <p v-if ="touchButton" class="lead mt-2">{{jumboText}}</p>
                 <p v-else class="lead mt-2">{{jumboText2}}</p>
                 <button class="btn btn-warning" @click="touchButton = !touchButton">Your journey starts here ...  </button>
@@ -55,13 +53,13 @@ onMounted(async() => {
 
         <!-- Homepage main content -->
         <div class= "container">
-            <h2>Today's Weather Across Michigan</h2>
+            <h2 class="page-header">Today's Weather Across Michigan</h2>
 
             <!-- Render API into a card component-->
             <ul  class="card-container d-flex flex-row justify-content-evenly mt-5 mb-5 flex-wrap gap-3">
                 <li
                     v-for="w in weather" :key="w.latitude">
-                    <!-- bring in api objects based on property names that will be used in card compoent -->
+                    <!-- Bring in api objects based on property names that will be used in card compoent -->
                     <Card 
                         :latitude="w.latitude"
                         :longitude="w.longitude"

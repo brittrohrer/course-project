@@ -13,3 +13,10 @@
     border-radius: 10px;
     border: solid $dark-gray 1px;
 }
+
+@media only screen and (max-width: 768px) {
+    .weather-card {
+        width: 18rem;
+    }
+    
+}

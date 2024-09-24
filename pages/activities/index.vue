@@ -114,33 +114,38 @@ const gridThree = ref([
 <template>
     <main class="container mt-5">
         <h2 class="page-header">Popular Destinations and Events</h2>
+
+        <!-- Destinations and Events Container -->
         <div class="container">
-        <!-- use a v-for for each grid section to display the header, title and body with each of their specified layouts-->
+
+            <!-- Grid One - Nature Destinations -->
             <div class="grid-container row">
                 <h3 class="grid-header">{{headerOne}}</h3>
                 <div :class="gOne.class"
-                v-for="gOne in gridOne"
-                :key="gOne.title">
+                      v-for="gOne in gridOne"
+                      :key="gOne.title">
                     <h4 class="text-center">{{gOne.title}}</h4>
                     <p>{{gOne.body}}</p>
                 </div>
             </div>
         
+            <!-- Grid Two - Other Destinations -->
             <div class="grid-container row">
                 <h3 class="grid-header">{{headerTwo}}</h3>
                 <div :class="gTwo.class"
-                    v-for="gTwo in gridTwo"
-                    :key="gTwo.title">
+                      v-for="gTwo in gridTwo"
+                      :key="gTwo.title">
                     <h4 class="text-center">{{gTwo.title}}</h4>
                     <p>{{gTwo.body}}</p>
                 </div>
             </div>
         
+            <!-- Grid Three - Events -->
             <div class="grid-container row">
                 <h3 class="grid-header">{{headerThree}}</h3>
                 <div :class="gThree.class"
-                    v-for="gThree in gridThree"
-                    :key="gThree.title">
+                      v-for="gThree in gridThree"
+                      :key="gThree.title">
                     <h4 class="text-center">{{gThree.title}}</h4>
                     <p>{{gThree.body}}</p>
                 </div>

@@ -2,9 +2,11 @@ p, h2, h3{
     color: black;
 }
 .page-header {
-    position:absolute;
-    top: 8rem;
+    margin-bottom: 3rem;
     font-size: 3rem;
     border-left: solid gold;
     padding: 2rem;
+}
+.lake-button {
+    font-size: 2rem;
 }

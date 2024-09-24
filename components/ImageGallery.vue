@@ -3,9 +3,9 @@
 import {defineProps, ref} from "vue";
 
 
-/* 
-    Create Prop with simple type validator
-    Declare what type of variables and what type of data we are recieving from the parent
+/* Image Prop
+   - Create Prop with simple type validator
+   - Declare what type of variables and what type of data we are recieving from the parent
 */
 const prop = defineProps({
         src: String,
@@ -15,40 +15,37 @@ const prop = defineProps({
         index: Number,
 });
 
-/* 
-    The function used to put border on clicked image
-*/
+// Function Add Border Around Clicked Image
 
 let isActive = ref(false); // create starting value of the isActive variable to false/inactive
-function useBorderFunc(e, index) {
-    this.isActive = !this.isActive; // create the toggle of active and not active on each click
-    if (this.isActive === true) { // if the image is active, log index and change border to active
-        console.log (index + ' is active');
+
+function addBorder(e) {
+    isActive = !isActive; // Toggle of Active/Not Active on each click  //First click needs double click why?
+    if (isActive === true) { // Active - activate border
+        console.log ('Is active');
         e.target.style.border = "solid black";
-    }
-    else {  // if the image is not active then log is not active and make border none
-        console.log (index + ' is not active');
+    } else {  // Not Active - no border
+        console.log ('Is not active');
         e.target.style.border = "none";
     }
 }
 </script>
 
 <!-- 
-    How we want our component structured
+   Structure the Image Component
 -->
 <template>
     <div class= "col-3">
-        <!-- 
-            bind with prop objects
-            use click event to call funtion
-            pass parameters(event and index) to function
+        <!-- Image Structure
+            - Bind with prop objects
+            - Click event to activate add Border Function
         -->
         <img :key="index"
             :src="prop.src"
             :alt="prop.alt"
             :class="prop.class"
             :title="prop.title"
-            @click = "useBorderFunc($event, index)"
+            @click = "addBorder"
         >
     </div>
 </template>

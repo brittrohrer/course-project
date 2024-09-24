@@ -65,15 +65,18 @@ const show = ref(true)
 <template>
     <main class="container mt-5 mb-5">
         <h2 class="page-header">The Great Lakes</h2>
+
+        <!--Accordian all 5 Lakes -->
         <div class="accordion" id="myFirstAccordion">
-            <!-- use v-for to loop through accordian array and display header and button -->
+            <!-- Loop Accordian Array to display each lake -->
             <div class="accordion-item"
                 v-for="a in accordion"
                 :key="a.header">
                 <h3 class="accordion-header"> 
-                    <!-- create button with target pulled from array and click event to show the body/content when button is clicked for target-->
+
+                    <!-- Accordian Button-->
                     <button
-                        class="accordion-button collapsed"
+                        class="accordion-button collapsed lake-button"
                         type="button" 
                         data-bs-toggle="collapse"
                         aria-expanded="false" 
@@ -84,7 +87,10 @@ const show = ref(true)
                     {{a.header}}
                     </button>
                 </h3>
-                <!-- identify target based on id and show the body -->
+
+                <!-- Accordian Text Body 
+                    - Dispay on button click
+                -->
                 <div :id="a.id" class="accordion-collapse collapse" data-bs-parent="#myFirstAccordion">
                     <div v-show="show" class="accordion-body">
                         <p>{{a.body}}</p>
@@ -99,7 +105,4 @@ const show = ref(true)
 
 <style scoped>
 
-button {
-    font-size: 2rem;
-}
 </style>

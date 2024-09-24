@@ -2,7 +2,7 @@
 
 import { ref } from "vue";
 
-/* create array of Landscape images to call on in template*/
+/* Gallery Images Array */
 const images = ref([
     {
         src: '/Copperharbor.jpeg',
@@ -95,10 +95,8 @@ const images = ref([
         class: 'img-fluid h-100 p-0 d-block mx-auto'
     },
     ],);
-
-
-/* create array of B/W images to call on in template*/
- const imagesCarousel = ref([
+/* Carousel Images Array */
+const imagesCarousel = ref([
     {
         class: 'carousel-item active',
         src: '/cutriver.jpeg',
@@ -119,24 +117,20 @@ const images = ref([
     },
  ],);
 
-
-//Image Prop Component
- 
-
-
-
 </script>
 
 
 <template>
    <main class="container mt-5">
-        <h2 class="page-header">A Picture Worth a 1000 Words</h2>
+        <h2 class="page-header">A Picture Worth A Thousand Words</h2>
+
+        <!--Image Gallery -->
         <div class="img-cont mt-5 d-flex flex-wrap gap-1 justify-content-center">
-        <!-- 
-            Name the props we are passing down to Image List from the specified array
-            use v-for to loop through the array and display each object (dynamic props)
-         -->
-        <ImageGallery 
+            <!-- ImageGalley Component
+                - Name the props we are passing down to Image List from the specified array
+                - Use v-for to loop through the array and display each object (dynamic props)
+            -->
+            <ImageGallery 
                  v-for="(image, index) in images"
                  :key='index'
                  :src='image.src' 
@@ -145,14 +139,15 @@ const images = ref([
                  :class='image.class'
                  :index="index"
             />
-            
         </div>
+
+        <!--Image Carousel-->
         <div id="myFirstCarousel" class="carousel slide container mt-5 mb-5 w-25">
                 <div class="carousel-inner">
-                  <!--create image carousel 
-                  use v-for to loop thrue imagesCarousel array
-                  use imageC.class to make sure the first image of the array has 'active' while the following images don't
-                  use ImageList prop to get imagesCarousel properties-->
+                <!--Create image carousel 
+                    - Use v-for to loop thrue imagesCarousel array
+                    - Use imageC.class to make sure the first image of the array has 'active' while the following images don't
+                -->
                     <img
                     v-for='imageC in imagesCarousel' 
                     :key='imageC.src'
@@ -162,7 +157,7 @@ const images = ref([
                     :class='imageC.class'
                     >
                 </div>
-                <!-- use buttons to move thru the image carousel-->
+                <!-- Buttons to move thru the image carousel-->
                 <button class="carousel-control-prev" 
                         type="button" 
                         data-bs-target="#myFirstCarousel" 
