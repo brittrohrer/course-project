@@ -14,11 +14,17 @@ const weatherProp = defineProps({
         windUnits: String,
         currentTemp: Number,
 });
+let on = ref(false)
+function displayColorTemp(e) {
+    on = !on;
+    console.log(on);
+}
 
-let btnActive = ref(false); // create starting value of the isActive variable to false/inactive
-function displayColorTemp(e, weatherProp, btnActive) {
-    
-    this.btnActive = !this.btnActive; // create the toggle of active and not active on each click
+//let btnActive = ref(false); // create starting value of the isActive variable to false/inactive
+
+
+/* function displayColorTemp(e, weatherProp, btnActive) {
+   this.btnActive = !this.btnActive; // create the toggle of active and not active on each click
     console.log(this.btnActive);
     if (this.btnActive === true) { // if the image is active, log index and change border to active
         if (weatherProp.currentTemp > 90) {
@@ -47,7 +53,7 @@ function displayColorTemp(e, weatherProp, btnActive) {
         e.target.style.backgroundColor = "white";
         e.target.style.border = "solid gray 1px";
     }
-}
+} */
 
 </script>
 <template>
@@ -61,13 +67,13 @@ function displayColorTemp(e, weatherProp, btnActive) {
         <div class="row">
             <div class="col-lg-6">
                 <p>Temp: <br>
-                   High/Low: {{ weatherProp.tempMax }}{{ tempUnits }} / {{ weatherProp.tempMin }}{{ tempUnits }} <br>
-                   Current: {{ weatherProp.currentTemp }}{{ tempUnits }}
+                   High/Low: {{ weatherProp.tempMax }}{{ weatherProp.tempUnits }} / {{ weatherProp.tempMin }}{{ weatherProp.tempUnits }} <br>
+                   Current: {{ weatherProp.currentTemp }}{{ weatherProp.tempUnits }}
                 </p>
             </div>
             <div class="col-lg-6">
                 <p>Wind Speed Max: <br>
-                   {{ weatherProp.wind }}{{ windUnits }}
+                   {{ weatherProp.wind }}{{ weatherProp.windUnits }}
                 </p>
             </div
             ><div class="col-lg-12">
@@ -76,9 +82,11 @@ function displayColorTemp(e, weatherProp, btnActive) {
                 </p>
             </div>
         </div>
-        
-       <button class="weather-button" @click="displayColorTemp($event, weatherProp)">
+        <button class="weather-button" @click="displayColorTemp">
             Click for Current Temp Color!
         </button>
+       <!-- <button class="weather-button" @click="displayColorTemp($event, weatherProp)">
+            Click for Current Temp Color!
+        </button> -->
     </div>
 </template>
