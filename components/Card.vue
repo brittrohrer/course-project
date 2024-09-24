@@ -17,7 +17,12 @@ const weatherProp = defineProps({
 let on = ref(false)
 function displayColorTemp(e) {
     on = !on;
-    console.log(on);
+    console.log('toggle ' + on);
+    if(on === true) {
+        console.log('got this ' + on)
+    } else {
+        console.log('not today' + on)
+    }
 }
 
 //let btnActive = ref(false); // create starting value of the isActive variable to false/inactive
