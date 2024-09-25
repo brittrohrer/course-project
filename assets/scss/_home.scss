@@ -3,19 +3,22 @@
     position: absolute;
     top: 8rem;
     padding: 1rem;
+    background-color: #ffffff60;
+    width: 65%;
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 576px) {
     .jumbo-container {
         top: 12rem;
         background-color: #ffffff80;
-        margin-right: 1rem;
+        width: 80%;
         padding: .5rem;
     }
     .jumbo-text {
         font-size: 1rem;
     }
     .jumbo-title {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
+
     }
 }

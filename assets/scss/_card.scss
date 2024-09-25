@@ -1,17 +1,24 @@
 .card-container {
-    background-color: $blue;
+    background-color: $lighter-blue;
     padding: 2rem 1rem;
     list-style-type: none;
 }
 .weather-card {
     width: 23rem;
     padding: 1rem;
+    border: none;
 }
 .weather-button {
     height: 3rem;
     background-color: $white;
     border-radius: 10px;
     border: solid $dark-gray 1px;
+}
+.weather-card-title {
+    font-size: 2rem;
+}
+.weather-card-sub-title {
+    font-size: 1.2rem;
 }
 
 @media only screen and (max-width: 768px) {

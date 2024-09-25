@@ -1,10 +1,11 @@
 p, h2, h3{
-    color: black;
+    color: $black;
 }
 .page-header {
     margin-bottom: 3rem;
     font-size: 3rem;
-    border-left: solid gold;
+    border-left: solid $gold;
+    border-bottom: solid $gold;
     padding: 2rem;
 }
 .lake-button {

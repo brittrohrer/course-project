@@ -114,12 +114,12 @@ const gridThree = ref([
 <template>
     <main class="container mt-5">
         <h2 class="page-header">Popular Destinations and Events</h2>
-
         <!-- Destinations and Events Container -->
+         <!-- Ids for some future links to sections in page - maybe -->
         <div class="container">
 
             <!-- Grid One - Nature Destinations -->
-            <div class="grid-container row">
+            <div class="grid-container row" id="nature-destinations">
                 <h3 class="grid-header">{{headerOne}}</h3>
                 <div :class="gOne.class"
                       v-for="gOne in gridOne"
@@ -130,7 +130,7 @@ const gridThree = ref([
             </div>
         
             <!-- Grid Two - Other Destinations -->
-            <div class="grid-container row">
+            <div class="grid-container row" id="other-destinations">
                 <h3 class="grid-header">{{headerTwo}}</h3>
                 <div :class="gTwo.class"
                       v-for="gTwo in gridTwo"
@@ -141,7 +141,7 @@ const gridThree = ref([
             </div>
         
             <!-- Grid Three - Events -->
-            <div class="grid-container row">
+            <div class="grid-container row" id="events-destinations">
                 <h3 class="grid-header">{{headerThree}}</h3>
                 <div :class="gThree.class"
                       v-for="gThree in gridThree"

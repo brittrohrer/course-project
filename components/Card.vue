@@ -52,27 +52,34 @@ function displayColorTemp(e) {
 <template>
     <div class="weather-card card">
         <div class="row">
-            <h3 class="col-lg-6 col-md-12">Location:</h3>
+            <h3 class="col-lg-6 col-md-12 weather-card-title">Location:</h3>
             <p class="col-lg-6 col-md-12">Lat: {{ weatherProp.latitude }} <br>
                            Long: {{ weatherProp.longitude }}
             </p>
         </div>
         <div class="row">
             <div class="col-lg-6">
-                <p>Temp: <br>
+                <h4 class="weather-card-sub-title">Temp:</h4>
+                <p>
                    High/Low: {{ weatherProp.tempMax }}{{ weatherProp.tempUnits }} / {{ weatherProp.tempMin }}{{ weatherProp.tempUnits }} <br>
                    Current: {{ weatherProp.currentTemp }}{{ weatherProp.tempUnits }}
                 </p>
             </div>
             <div class="col-lg-6">
-                <p>Wind Speed Max: <br>
+                <h4 class="weather-card-sub-title">Wind Speed Max:</h4>
+                <p>
                    {{ weatherProp.wind }}{{ weatherProp.windUnits }}
                 </p>
-            </div
-            ><div class="col-lg-12">
-                <p>Sunrise: {{ weatherProp.sunrise }} <br>
-                   Sunset: {{ weatherProp.sunset }}
-                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <h4 class="weather-card-sub-title">Sunrise:</h4>
+                <p>{{ weatherProp.sunrise }}</p>
+            </div>
+            <div class="col-lg-6">
+                <h4 class="weather-card-sub-title">Sunset:</h4>
+                <p>{{ weatherProp.sunset }}</p>
             </div>
         </div>
         <button class="weather-button" @click="displayColorTemp">
