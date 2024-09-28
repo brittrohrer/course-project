@@ -54,7 +54,13 @@ onMounted(async() => {
         <!-- Homepage main content -->
         <div class= "container">
             <h2 class="page-header">Today's Weather Across Michigan</h2>
-
+            <div class="row">
+                <p class="p-1 freezing col text-center">Cold</p>
+                <p class="p-1 cold col text-center">Cool</p>
+                <p class="p-1 comfy col text-center">Comfy</p>
+                <p class="p-1 warm col text-center">Warm</p>
+                <p class="p-1 hot col text-center">Hot</p>
+            </div>
             <!-- Render API into a card component-->
             <ul  class="card-container d-flex flex-row justify-content-evenly mt-5 mb-5 flex-wrap gap-3">
                 <li

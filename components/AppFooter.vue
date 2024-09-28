@@ -37,7 +37,7 @@ const emailContact= ref('email@email.com');
                 </div>
             </div>
             <div class="row">
-                <p class="footer-text text-center">Created by Brittni Rohrer : 2024</p>
+                <p class="footer-text text-center">Created by Brittni Rohrer | 2024</p>
             </div>
         </div>
             
