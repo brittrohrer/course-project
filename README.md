@@ -35,12 +35,12 @@ This website is available on
 - Apple and Android Mobile Devices
 
 ## Screenshots
-![](../screenshots/Homescreen.jpeg)
-![](../screenshots/Weather.jpeg)
-![](../screenshots/GreatLakes.jpeg)
-![](../screenshots/destinations.jpeg)
-![](../screenshots/Events.jpeg)
-![](../screenshots/gallery.jpeg)
+![homescreen](../screenshots/Homescreen.jpeg)
+![weather](../screenshots/Weather.jpeg)
+![greatlakes](../screenshots/GreatLakes.jpeg)
+![destinations](../screenshots/destinations.jpeg)
+![events](../screenshots/Events.jpeg)
+![gallery](../screenshots/gallery.jpeg)
 ## Status
 This website is a currently being modified and updated
 
