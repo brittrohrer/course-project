@@ -25,7 +25,8 @@ This website was created with
 - Weather Data: Open-Meteo weather API
 
 ## Testing
-
+Checked for acessability issues
+- has some contrast issues to fix at a later time
 ## Compatability
 This website is available on 
 - Firefox
