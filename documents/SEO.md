@@ -12,11 +12,10 @@ Proposal for SEO
 Things I want to add
 
     1. Want to add images next to relavent content like the activities page.
-    2. Want to move the navigation outside of the header and into its own section - so it can be found easier.
-    3. Go back into the structure of each page and make sure the header tags are informative of what is in that section.
-    4. Make sure the alt text is very descriptive not only for the crawlers but for accessibility with screen readers or failure to load.
-    5. Maybe add some links to relavent resources.
-    6. Add aria-label to links so they describe what and where they go to.
+    2. Go back into the structure of each page and make sure the header tags are informative of what is in that section.
+    3. Make sure the alt text is very descriptive not only for the crawlers but for accessibility with screen readers or failure to load.
+    4. Maybe add some links to relavent resources.
+    5. Add aria-label to links so they describe what and where they go to.
 
 
 
@@ -24,3 +23,4 @@ Things I added
 
     1. Include Title and Description
         Created default/home title and description and usehead() to chnge the title and description for each page.
+    2. Move the navigation outsidde of the header to its own section - so it can be found easier.
