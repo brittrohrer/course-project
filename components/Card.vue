@@ -39,7 +39,7 @@ function displayColorTemp(e) {
             e.target.style.backgroundColor = "#74B985";
             e.target.style.border = "none";
         } else {
-            e.target.style.backgroundColor = "#26798A";
+            e.target.style.backgroundColor = "#5fc0d3";
             e.target.style.border = "none";
         }
     } else { // False - go back to original style
