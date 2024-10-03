@@ -4,6 +4,10 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
     head: {
+      title: 'Travel Michigan',
+      meta: [
+        {name: 'description', content: 'Learn about all you need to know about when vising michigan'}
+      ],
       link: [
         {
           rel: 'stylesheet',

@@ -109,6 +109,13 @@ const gridThree = ref([
     }
 ],);
 
+/* Change head for this page */
+useHead({
+    title: 'Michigan | Things to Do',
+    meta: [
+        {name: 'description', content: 'Discover activities, events, and destinations in Michigan'}
+    ]
+})
 </script>
 
 <template>

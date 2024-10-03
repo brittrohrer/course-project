@@ -117,6 +117,13 @@ const imagesCarousel = ref([
     },
  ],);
 
+/* Change head for this page */
+useHead({
+    title: 'Michigan | Image Gallery',
+    meta: [
+        {name: 'description', content: 'View images of Michigan'}
+    ]
+})
 </script>
 
 

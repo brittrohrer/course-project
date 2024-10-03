@@ -60,6 +60,14 @@ const accordion = ref([
     },
 ],); 
 const show = ref(true)
+
+/* Change head for this page */
+useHead({
+    title: 'Michigan | The Great Lakes',
+    meta: [
+        {name: 'description', content: 'Learn about the five Great Lakes'}
+    ]
+})
 </script>
 
 <template>
