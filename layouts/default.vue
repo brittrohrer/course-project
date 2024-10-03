@@ -5,6 +5,7 @@ import {ref} from "vue";
 <template>
     <!--Default Page Structure-->
     <div>
+        <AppNav />
         <AppHeader />
         <!-- Use Header Component -->
         
