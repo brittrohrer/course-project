@@ -16,6 +16,9 @@ Things I want to add
     3. Make sure the alt text is very descriptive not only for the crawlers but for accessibility with screen readers or failure to load.
     4. Maybe add some links to relavent resources.
     5. Add aria-label to links so they describe what and where they go to.
+    6. Add semantic html - replace some divs with applicable article, aside etc tags
+    7. Make the website more sharable with good looking content for backlink
+    8. Create a 404 page that can link back to the homepage
 
 
 
